@@ -38,7 +38,7 @@ public class Injector {
         Field[] fields = value.getClass().getDeclaredFields();
         for (Field field : fields) {
             if (field.isAnnotationPresent(AutoInjectable.class)) {
-                var implValue = getFieldValue(field);
+                var implValue = inject(getFieldValue(field));
                 try {
                     field.set(value, implValue);
                 } catch (IllegalAccessException e) {
