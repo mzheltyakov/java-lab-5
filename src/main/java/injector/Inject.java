@@ -1,10 +1,17 @@
 package injector;
 
+/**
+ * Класс, хранящий информации о соотвествии типа свойства и типом для его инициализации
+ */
 public class Inject {
 
     private String initialization;
     private String initiator;
 
+    /**
+     * Конструктор, парсящий входную строку
+     * @param line строка файла
+     */
     public Inject(String line) {
         int index = line.indexOf('=');
         if (index == -1)

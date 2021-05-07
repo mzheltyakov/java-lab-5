@@ -6,6 +6,7 @@ public class app {
         var injector = new Injector("inject.properties");
         var testClass = new TestClass();
         injector.inject(testClass).testField.doSome();
+        testClass.testField.doSome();
     }
 
 }
